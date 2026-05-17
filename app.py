@@ -241,7 +241,7 @@ app.layout = html.Div(style={'backgroundColor': '#F8F9FA', 'padding': '30px', 'f
         html.P("Exploración interactiva de estadísticas vitales, violencia y causas clínicas", style={'color': colores['claro'], 'fontSize': '16px', 'marginTop': '10px'}),
     html.A(
             "Ver repositorio en GitHub",
-            href="https://github.com/TU_USUARIO/TU_REPOSITORIO", # Coloca tu enlace real aquí
+            href="https://github.com/rmhzo77/dashboard-mortalidad-col-rmhzo.git", # Coloca tu enlace real aquí
             target="_blank",
             style={
                 'display': 'inline-block',
