@@ -1,1 +1,38 @@
+/* Reseteo básico de márgenes */
+* {
+    box-sizing: border-box;
+}
 
+/* El grid-container utiliza CSS Grid Layout, el estándar de oro en diseño responsivo actual */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 25px; /* Espacio entre los gráficos */
+}
+
+/* Tarjeta individual del gráfico */
+.grid-item {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(3, 50, 89, 0.08); /* Sombra muy sutil con tinte azulado */
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suavidad en el movimiento */
+}
+
+/* Efecto al pasar el ratón: la tarjeta "flota" */
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(3, 50, 89, 0.15);
+}
+
+/* Elementos prominentes como el mapa y la tabla ocuparán todo el ancho sin importar la pantalla */
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Media query para pantallas de móviles muy pequeñas */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Una sola columna obligatoria */
+    }
+}
